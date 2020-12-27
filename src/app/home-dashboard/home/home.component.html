@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="container">   
+    <table class="table table-hover table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let eg of data">
+          <td>{{eg.id}}</td>
+          <td>{{eg.title}}</td>
+          <td>{{eg.description}}</td>
+          <td>{{eg.action}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <app-footer></app-footer>
