@@ -6,10 +6,12 @@ import { ViewChildrenExampleComponent } from './view-children-example/view-child
 import { HelloComponent } from './view-children-example/hello/hello.component';
 import { ViewChildExampleComponent } from './view-child-example/view-child-example.component';
 import { HelloChildComponent } from './view-child-example/hello-child/hello-child.component';
+import { DomUpdate1Component } from './dom-update1/dom-update1.component';
+import { ChildComponent } from './dom-update1/child/child.component';
 
 
 @NgModule({
-  declarations: [ViewChildrenExampleComponent, HelloComponent, ViewChildExampleComponent, HelloChildComponent],
+  declarations: [ViewChildrenExampleComponent, HelloComponent, ViewChildExampleComponent, HelloChildComponent, DomUpdate1Component, ChildComponent],
   imports: [
     CommonModule,
     AngularExampleRoutingModule

@@ -10,6 +10,18 @@
     "title":"example using @ViewChildren",
     "description":"",
     "action":"viewchildren"
+},
+{
+    "id":3,
+    "title":"DOM mainupulation using @ViewChild, @ViewChildren and Renderer 2",
+    "description":"Here we are using @ViewChild, @ViewChildren and Renderer 2 to manupulate DOM elements",
+    "action":"dom-mainupulatioin1"
+},
+{
+    "id":4,
+    "title":"DOM mainupulation using class variable",
+    "description":"Here we are using class variables to manupulate DOM elements",
+    "action":"dom-mainupulatioin2"
 }
     
 ]

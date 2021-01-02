@@ -1,0 +1,50 @@
+<br>
+<div class="container">
+    <button [ngClass]="flag1 ? 'btn btn-success' :'' " (click)="flag1=(!flag1)">Example 1</button>
+    <button [ngClass]="flag2 ? 'btn btn-success' :'' " (click)="flag2=(!flag2)">Example 2</button>
+    <button [ngClass]="flag3 ? 'btn btn-success' :'' " (click)="flag3=(!flag3)">Example 3</button>
+    <button [ngClass]="flag4 ? 'btn btn-success' :'' " (click)="flag4=(!flag4);setButtonEvent()">Example 4</button>
+</div>
+
+<!---------------------------------------First Example ------------------------------------------------------>
+<div class="container" *ngIf="flag1"> <br> <br>
+    <p #maincontent>
+        Start editing to see some magic happen :)
+    </p>
+
+    <p #subcontent>
+        @ViewChield example
+    </p>
+
+    <button (click)="changeMainContent()">Change main content</button>
+    <button (click)="changeSubContent()">Change sub content</button>
+</div>
+
+
+<!------------------------------------------Second Example ------------------------------------------------------>
+
+<div class="container" *ngIf="flag2"><br><br>
+    <app-child></app-child>
+    <button (click)="toggleChild()">toggle</button>
+</div>
+
+
+<!------------------------------------------Third Example ------------------------------------------------------>
+
+<div class="container" *ngIf="flag3"> <br><br>
+    <button (click)="setColor()">Set Color</button>
+    <p #test>Hello Aalam</p>
+</div>
+
+
+<!------------------------------------------Fourth Example ------------------------------------------------------>
+<div class="container" *ngIf="flag4"> <br><br>
+    <button class="dx-edit-row dx-command-edit dx-link-save">My Button</button>
+    <br>
+    <br>
+    <select name="options" id="selectList" class="selectList" (change)="onChange()" #selectList>
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+    </select>
+</div>
