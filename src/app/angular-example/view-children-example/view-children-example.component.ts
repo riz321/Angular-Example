@@ -78,7 +78,7 @@ export class ViewChildrenExampleComponent implements OnInit, AfterViewInit {
   showVersion(){
     this.hellos.forEach(hello => {
       console.log(hello);
-      hello.setVersionByParent(++this.version);
+      hello.setVersionByParent(this.version);
     });
   }
 

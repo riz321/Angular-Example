@@ -1,0 +1,24 @@
+
+<br>
+<div class="container"> 
+  <button [ngClass]="flag1 ? 'btn btn-success' :'' " (click)="flag1=(!flag1)">Example1</button>
+  <button [ngClass]="flag2 ? 'btn btn-success' :'' " (click)="flag2=(!flag2)">Example2</button>
+</div>
+
+<!---------------------------------------First Example ------------------------------------------------------>
+<div class="container" *ngIf="flag1">     <br>   <br>
+    <button (click)="viewElementsData()">View Elements</button>
+  
+    <div #pnameTemp>Mohit
+      <p >address 1</p>
+      <p>address 2</p>
+    </div>
+  </div>
+
+  <!------------------------------------------Second Example ------------------------------------------------------>
+
+  <div class="container" *ngIf="flag2">     <br>   <br>
+    <button (click)="showVersion()">Show Version</button>
+    <app-hello-child name="Angular "></app-hello-child>
+    <!-- <app-hello name="Angular "></app-hello> -->
+  </div>

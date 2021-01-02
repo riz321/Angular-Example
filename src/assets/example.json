@@ -1,15 +1,15 @@
 [
 {
     "id":1,
-    "title":"example using @ViewChildren",
+    "title":"example using @ViewChild",
     "description":"",
-    "action":""
+    "action":"viewchild"
 },
 {
     "id":2,
     "title":"example using @ViewChildren",
     "description":"",
-    "action":""
+    "action":"viewchildren"
 }
     
 ]
