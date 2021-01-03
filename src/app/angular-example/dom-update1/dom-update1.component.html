@@ -4,6 +4,11 @@
     <button [ngClass]="flag2 ? 'btn btn-success' :'' " (click)="flag2=(!flag2)">Example 2</button>
     <button [ngClass]="flag3 ? 'btn btn-success' :'' " (click)="flag3=(!flag3)">Example 3</button>
     <button [ngClass]="flag4 ? 'btn btn-success' :'' " (click)="flag4=(!flag4);setButtonEvent()">Example 4</button>
+    <button [ngClass]="flag5 ? 'btn btn-success' :'' " (click)="flag5=(!flag5)">Example 5</button>
+    <button [ngClass]="flag6 ? 'btn btn-success' :'' " (click)="flag6=(!flag6)">Example 6</button>
+    <button [ngClass]="flag7 ? 'btn btn-success' :'' " (click)="flag7=(!flag7)">Example 7</button>
+    <button [ngClass]="flag8 ? 'btn btn-success' :'' " (click)="flag8=(!flag8)">Example 8</button>
+    <button [ngClass]="flag9 ? 'btn btn-success' :'' " (click)="flag9=(!flag9)">Example 9</button>
 </div>
 
 <!---------------------------------------First Example ------------------------------------------------------>
@@ -48,3 +53,44 @@
         <option>Option 3</option>
     </select>
 </div>
+
+<!------------------------------------------Fifth Example ------------------------------------------------------>
+<div class="container" *ngIf="flag5"> <br><br>
+    <button (click)=changeColor1()>Change Color1</button>
+    <button (click)=changeColor2()>Change Color2</button>
+    <br>
+    <h1 *ngFor="let item of data" #num>{{ item }}</h1>
+</div>
+
+<!------------------------------------------Sixth Example ------------------------------------------------------>
+<div class="container" *ngIf="flag6"> <br><br>
+    <button class="btn btn-primary" (click)="assignClass()">Assign class</button>
+    <button class="btn btn-danger" (click)="removeClass()">Remove class</button>
+    <p #test>prova</p>
+</div>
+
+
+
+<!------------------------------------------Seventh Example ------------------------------------------------------>
+<div class="container" *ngIf="flag7"> <br><br>
+    <button class="btn btn-primary" (click)="createDivElement()">create Div</button>
+    <p #elem>
+        Start editing to see some magic happen :)
+      </p>
+</div>
+
+
+<!------------------------------------------Eight Example ------------------------------------------------------>
+<div class="container" *ngIf="flag8"> <br><br>
+    <button class="btn btn-primary" (click)="setElementProp()">set property</button>
+    <div #elPrpTemp></div>
+</div>
+
+<!------------------------------------------Ninth Example ------------------------------------------------------>
+<div class="container" *ngIf="flag9"> <br><br>
+    <div createButton>
+        <p>Click to add a button!</p>
+    </div>
+</div>
+
+

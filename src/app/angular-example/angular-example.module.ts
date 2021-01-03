@@ -8,10 +8,11 @@ import { ViewChildExampleComponent } from './view-child-example/view-child-examp
 import { HelloChildComponent } from './view-child-example/hello-child/hello-child.component';
 import { DomUpdate1Component } from './dom-update1/dom-update1.component';
 import { ChildComponent } from './dom-update1/child/child.component';
+import { CreateButtonDirective } from './dom-update1/create-button.directive';
 
 
 @NgModule({
-  declarations: [ViewChildrenExampleComponent, HelloComponent, ViewChildExampleComponent, HelloChildComponent, DomUpdate1Component, ChildComponent],
+  declarations: [ViewChildrenExampleComponent, HelloComponent, ViewChildExampleComponent, HelloChildComponent, DomUpdate1Component, ChildComponent, CreateButtonDirective],
   imports: [
     CommonModule,
     AngularExampleRoutingModule
