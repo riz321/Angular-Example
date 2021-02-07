@@ -10,30 +10,12 @@ export class ViewChildrenExampleComponent implements OnInit, AfterViewInit {
   @ViewChildren('pnameTemp') persons!: QueryList<ElementRef>;
   @ViewChildren(HelloComponent) hellos!: QueryList<any>;
   version: number = 6;
-  data: any;
-  displayStatus: boolean = true;
   flag1: boolean = false;
   flag2: boolean = false;
-  flag3: boolean = false;
   display: boolean = true;
   constructor() { }
 
   ngOnInit(): void {
-    this.data = [{ rollNo: 1, name: "abcd", subject: ["math", "English", "Urdu"] }
-      , { rollNo: 2, name: "xyz", subject: ["math", "English", "Urdu"] }
-      , { rollNo: 3, name: "pqr", subject: ["math", "English", "Urdu"] }
-      , { rollNo: 4, name: "lmn", subject: ["math", "English", "Urdu"] }
-    ];
-  }
-
-  viewAllSubjects(status: boolean) {
-    if (status) {
-      this.data.forEach((element: any) => element['view'] = true);
-      this.displayStatus = false;
-    } else {
-      this.data.forEach((element: any) => element['view'] = false);
-      this.displayStatus = true;
-    }
   }
 
   viewElementsData(){

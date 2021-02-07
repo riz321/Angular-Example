@@ -2,48 +2,13 @@
 <div class="container"> 
   <button [ngClass]="flag1 ? 'btn btn-success' :'' " (click)="flag1=(!flag1)">Example1</button>
   <button [ngClass]="flag2 ? 'btn btn-success' :'' " (click)="flag2=(!flag2)">Example2</button>
-  <button [ngClass]="flag3 ? 'btn btn-success' :'' " (click)="flag3=(!flag3)">Example3</button>
 </div>
+
+<!-- ------------------------First example --------------------------------------------------- -->
+
 
 
 <div class="container" *ngIf="flag1">     <br>   <br>
-    <button (click)="viewAllSubjects(displayStatus)">view all subjects</button>
-    <br> 
-    <table class="table table-hover table-striped">
-      <thead>
-        <tr>
-          <th>Roll No</th>
-          <th>Name</th>
-          <th>subject</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let obj of data;let i=index">
-          <td>{{obj.rollNo}}</td>
-          <td>{{obj.name}}</td>
-          <td>
-            <button (click)="obj['view']=(!obj['view'])">view subjects</button>
-            <ng-container  *ngIf="obj['view']">
-          <ul class="code-editor-options-menu" *ngFor="let sub of obj.subject">
-            <li>
-              <span>{{sub}}</span>
-            </li>   
-          </ul>
-        
-        </ng-container></td>
-          <!-- <td>{{eg.action}} <button [routerLink]="'/viewchildren'">go</button></td> -->
-          <td> <button >go</button></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-<!-- ------------------------second example --------------------------------------------------- -->
-
-
-
-<div class="container" *ngIf="flag2">     <br>   <br>
   <button (click)="viewElementsData()">View Elements</button>
 
   <div #pnameTemp>Mohit
@@ -64,7 +29,7 @@
 
 <!-- ------------------------third example --------------------------------------------------- -->
 
-  <div class="container" *ngIf="flag3">     <br>   <br>
+  <div class="container" *ngIf="flag2">     <br>   <br>
     <button (click)="showVersion()">Show Version</button>
     <app-hello name="Angular -> "></app-hello>
     <app-hello name="Angular =>"></app-hello>
