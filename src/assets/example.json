@@ -1,19 +1,19 @@
 [
 {
     "id":1,
-    "title":"example using @ViewChild",
+    "title":"@ViewChild",
     "description":"",
     "action":"viewchild"
 },
 {
     "id":2,
-    "title":"example using @ViewChildren",
+    "title":"@ViewChildren",
     "description":"",
     "action":"viewchildren"
 },
 {
     "id":3,
-    "title":"DOM mainupulation using @ViewChild, @ViewChildren and Renderer 2",
+    "title":"@ViewChild, @ViewChildren and Renderer 2",
     "description":"Here we are using @ViewChild, @ViewChildren and Renderer 2 to manupulate DOM elements",
     "action":"dom-mainupulatioin1"
 },
@@ -24,10 +24,28 @@
     "action":"dom-mainupulatioin2"
 },
 {
-    "id":4,
-    "title":"DOM mainupulation using Query Selector Method",
+    "id":5,
+    "title":"Query Selector Method",
     "description":"Here we are using querySelector() method to manupulate DOM elements",
     "action":"query-selector"
+},
+{
+    "id":6,
+    "title":"@Input and @Output",
+    "description":"Here we are using these decorator for communication between child and parent componet",
+    "action":"input-output-decorator"
+},
+{
+    "id":7,
+    "title":"",
+    "description":"Here we are communicating between two components which are not related to each other",
+    "action":"input-output-decorator"
+},
+{
+    "id":8,
+    "title":"Lazy loading",
+    "description":"Here we will create child module to load whever ther are required to increase performance",
+    "action":"input-output-decorator"
 }
     
 ]
