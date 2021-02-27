@@ -11,12 +11,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let obj of data;let i=index" #colorListTemp>
+        <tr *ngFor="let obj of data;let i=index" [class]="obj.colorFalg?'color-class':''">
           <td>{{obj.rollNo}}</td>
           <td>{{obj.name}}</td>
           <td>
-            <button (click)='viewSubject(i)'>view subjects</button>
-          <ul  #subjectListTemp   class="hide-list">
+            <button (click)='obj.viewSub=!(obj.viewSub)'>view subjects</button>
+          <ul   *ngIf="obj.viewSub" >
             <ng-container *ngFor="let sub of obj.subject">
             <li>
               <span>{{sub}}</span>
@@ -25,8 +25,8 @@
           </ul>
         </td>
           <!-- <td>{{eg.action}} <button [routerLink]="'/viewchildren'">go</button></td> -->
-          <td> <button (click)="changeColor(colorListTemp)">Change Style</button>
-            <button (click)="removeColor(colorListTemp)">Remove Style</button>
+          <td> <button (click)="obj.colorFalg=true">Change Style</button>
+            <button (click)="obj.colorFalg=false">Remove Style</button>
           </td>
         </tr>
       </tbody>

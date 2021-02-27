@@ -22,6 +22,12 @@
     "title":"DOM mainupulation using class variable",
     "description":"Here we are using class variables to manupulate DOM elements",
     "action":"dom-mainupulatioin2"
+},
+{
+    "id":4,
+    "title":"DOM mainupulation using Query Selector Method",
+    "description":"Here we are using querySelector() method to manupulate DOM elements",
+    "action":"query-selector"
 }
     
 ]

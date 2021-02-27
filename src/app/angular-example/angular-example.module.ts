@@ -10,10 +10,11 @@ import { DomUpdate1Component } from './dom-update1/dom-update1.component';
 import { ChildComponent } from './dom-update1/child/child.component';
 import { CreateButtonDirective } from './dom-update1/create-button.directive';
 import { DomUpdate2Component } from './dom-update2/dom-update2.component';
+import { QuerySelectorComponent } from './query-selector/query-selector.component';
 
 
 @NgModule({
-  declarations: [ViewChildrenExampleComponent, HelloComponent, ViewChildExampleComponent, HelloChildComponent, DomUpdate1Component, ChildComponent, CreateButtonDirective, DomUpdate2Component],
+  declarations: [ViewChildrenExampleComponent, HelloComponent, ViewChildExampleComponent, HelloChildComponent, DomUpdate1Component, ChildComponent, CreateButtonDirective, DomUpdate2Component, QuerySelectorComponent],
   imports: [
     CommonModule,
     AngularExampleRoutingModule

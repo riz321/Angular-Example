@@ -16,6 +16,7 @@ export class DomUpdate1Component implements OnInit {
   flag7: boolean = false;
   flag8: boolean = false;
   flag9: boolean = false;
+  flag10: boolean = false;
   @ViewChild('maincontent') mainContent!: ElementRef;
   @ViewChild('subcontent') subContent: any;
   @ViewChild(ChildComponent) child: any ;
@@ -25,11 +26,22 @@ export class DomUpdate1Component implements OnInit {
   @ViewChildren('num') num!: QueryList<ElementRef>;
   @ViewChild('test2') test2!: ElementRef;
   data = [1, 2, 3];
+  studentData:any;
+
+  displayStatus: boolean = true;
+  @ViewChildren('subjectListTemp') subjectTemp!: QueryList<ElementRef>;
+  showHideStatus:boolean=false;
+  @ViewChildren('colorListTemp') colorListTemp!: QueryList<ElementRef>;
   constructor(private el: ElementRef,
               private renderer: Renderer2)
               { }
 
   ngOnInit(): void {
+    this.studentData = [{ rollNo: 1, name: "abcd", subject: ["math", "English", "Urdu"] }
+    , { rollNo: 2, name: "xyz", subject: ["math", "English", "Urdu"] }
+    , { rollNo: 3, name: "pqr", subject: ["math", "English", "Urdu"] }
+    , { rollNo: 4, name: "lmn", subject: ["math", "English", "Urdu"] }
+  ];
   }
 
   public changeMainContent() {
@@ -110,6 +122,41 @@ export class DomUpdate1Component implements OnInit {
   @ViewChild('elPrpTemp') elPrpTemp!: ElementRef;
   setElementProp(){
     this.renderer.setProperty(this.elPrpTemp.nativeElement, 'innerHTML', '<h1>Hello world</h1>');
+  }
+
+  viewAllSubjects(status: boolean) {
+    console.log(this.subjectTemp);
+    this.subjectTemp.forEach( obj =>{
+      let className=obj.nativeElement.className;
+      if(!this.showHideStatus){
+        this.renderer.removeClass(obj.nativeElement, className);
+        this.renderer.addClass(obj.nativeElement, 'show-list' );
+      }else{
+        this.renderer.removeClass(obj.nativeElement, className);
+        this.renderer.addClass(obj.nativeElement, 'hide-list' );
+      }
+    });
+    this.showHideStatus=!this.showHideStatus;
+  }
+
+  viewSubject(index:number){
+    let currentNativeElement=this.subjectTemp.toArray()[index].nativeElement
+    let className=currentNativeElement.className;
+    if(className=='hide-list'){
+      this.renderer.removeClass(currentNativeElement, className);
+      this.renderer.addClass(currentNativeElement, 'show-list' );
+    }else{
+      this.renderer.removeClass(currentNativeElement, className);
+      this.renderer.addClass(currentNativeElement, 'hide-list' );
+    }
+  }
+
+  changeColor(tempVar:Element){
+    this.renderer.setStyle(tempVar, 'background-color', 'blue');
+  }
+
+  removeColor(tempVar:Element){
+    this.renderer.removeStyle(tempVar, 'background-color');
   }
 
 }

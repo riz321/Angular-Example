@@ -9,6 +9,7 @@
     <button [ngClass]="flag7 ? 'btn btn-success' :'' " (click)="flag7=(!flag7)">Example 7</button>
     <button [ngClass]="flag8 ? 'btn btn-success' :'' " (click)="flag8=(!flag8)">Example 8</button>
     <button [ngClass]="flag9 ? 'btn btn-success' :'' " (click)="flag9=(!flag9)">Example 9</button>
+    <button [ngClass]="flag10 ? 'btn btn-success' :'' " (click)="flag10=(!flag10)">Example 10</button>
 </div>
 
 <!---------------------------------------First Example ------------------------------------------------------>
@@ -92,5 +93,42 @@
         <p>Click to add a button!</p>
     </div>
 </div>
+
+
+<!------------------------------------------Tenth Example ------------------------------------------------------>
+<div class="container" *ngIf="flag10">     <br>   <br>
+    <button (click)="viewAllSubjects(displayStatus)">view all subjects</button>
+    <br> 
+    <table class="table table-hover table-striped">
+      <thead>
+        <tr >
+          <th>Roll No</th>
+          <th>Name</th>
+          <th>subject</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let obj of studentData;let i=index" #colorListTemp>
+          <td>{{obj.rollNo}}</td>
+          <td>{{obj.name}}</td>
+          <td>
+            <button (click)='viewSubject(i)'>view subjects</button>
+          <ul  #subjectListTemp   class="hide-list">
+            <ng-container *ngFor="let sub of obj.subject">
+            <li>
+              <span>{{sub}}</span>
+            </li>   
+          </ng-container>
+          </ul>
+        </td>
+          <!-- <td>{{eg.action}} <button [routerLink]="'/viewchildren'">go</button></td> -->
+          <td> <button (click)="changeColor(colorListTemp)">Change Style</button>
+            <button (click)="removeColor(colorListTemp)">Remove Style</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 
